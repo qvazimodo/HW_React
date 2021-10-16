@@ -1,0 +1,8 @@
+.ListOfMessages {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    /*width: 50%;*/
+    border: 4px double black;
+    width: 100%;
+}

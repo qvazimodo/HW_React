@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import List from'./Message/Message.js';
-import './Message/Message.css';
-import Form from'./Form/Form.js';
-import './Form/form.css';
+import List from './components/listOfMessages/Message/Message.js';
+// import './Message/Message.css';
+import Form from './components/listOfMessages/Form/Form.js';
+import './components/listOfMessages/Form/form.css';
 import './App.css';
 
 
@@ -34,9 +34,13 @@ export default function App() {
 
     return (
         <div className = 'App'>
-            <List
-                messageList = {messageList}
-            />
+            {messageList.map((mess, index) => (
+                <List
+                    key = {index}
+                    mess = {mess}
+                />
+            ))}
+
 
             <Form
                 handleSubmit = {handleSubmit}
