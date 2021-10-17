@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf6e1a4c-e06e-490f-aec3-451f562f4f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/Forma/Forma.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/Room.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Message/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessages.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessages.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/Room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/global.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,16 +34,30 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1zBkH7YU3Mf8e2x2jkl0pIhT8D5" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Веб-разработка\React  базовый курс\HW_R\app\src\components" />
+      <recent name="D:\Веб-разработка\React  базовый курс\HW_R\app\src\components\listOfMessages" />
+      <recent name="D:\Веб-разработка\React  базовый курс\HW_R\app\src\listOfMessages" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -57,6 +83,7 @@
       <updated>1633628786323</updated>
       <workItem from="1633628810000" duration="5900000" />
       <workItem from="1633968463206" duration="14792000" />
+      <workItem from="1634400685009" duration="24807000" />
     </task>
     <servers />
   </component>
