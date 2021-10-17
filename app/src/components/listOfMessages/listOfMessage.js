@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import {Input, InputAdornment, List, ListItem, ListItemText} from "@mui/material";
 import { Send } from "@mui/icons-material";
 import Message from './Message/Message.js';
-import './listOfMessages.css';
+import styles from'./listOfMessages.module.css';
 
 
 export const  ListOfMessages = () => {
@@ -45,28 +45,17 @@ export const  ListOfMessages = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Введите сообщение..."
+                autoFocus={true}
                 fullWidth={true}
                 // onKeyPress={handlePressInput}
                 endAdornment={
                     <InputAdornment position="end">
                         {text && (
-                            <Send  onClick={handleSubmit} />
+                            <Send className={styles.icon} onClick={handleSubmit} />
                         )}
                     </InputAdornment>
                 }
             />
-
-            {/*<List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>*/}
-            {/*    {[1, 2, 3].map((value) => (*/}
-            {/*        <ListItem*/}
-            {/*            key={value}*/}
-            {/*            disableGutters*/}
-
-            {/*        >*/}
-            {/*            <ListItemText primary={`Line item ${value}`} />*/}
-            {/*        </ListItem>*/}
-            {/*    ))}*/}
-            {/*</List>*/}
 
         </div>
     );

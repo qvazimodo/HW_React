@@ -2,33 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf6e1a4c-e06e-490f-aec3-451f562f4f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/components/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessages.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/Room.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/Form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Form/form.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Message/Message.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/Message/Message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/Message/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessage.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessages.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfMessages/listOfMessages.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/Room/Room.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/components/listOfRooms/listOfRooms.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/global.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +83,7 @@
       <updated>1633628786323</updated>
       <workItem from="1633628810000" duration="5900000" />
       <workItem from="1633968463206" duration="14792000" />
-      <workItem from="1634400685009" duration="14564000" />
+      <workItem from="1634400685009" duration="24807000" />
     </task>
     <servers />
   </component>

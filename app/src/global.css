@@ -101,6 +101,7 @@ menu,
 nav,
 section {
     display: flex;
+    flex-direction: column;
 }
 body {
     line-height: 1;
