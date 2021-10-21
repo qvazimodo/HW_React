@@ -5,40 +5,50 @@ import Message from './Message/Message.js';
 import styles from'./listOfMessages.module.css';
 
 
-export const  ListOfMessages = () => {
+export const  ListOfMessages = ({ messageList, sendMessage }) => {
     const[text, setText] = useState('');
-    const[messageList, setMessageList] = useState([
-        { author: "Bot", text: "Hello"},
-    ]);
+    // const[messageList, setMessageList] = useState([
+    //     { author: "Bot", text: "Hello"},
+    // ]);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if(text) {
-            setMessageList((state) => [...state, {author: "User", text}]);
+    const handlePressInput = ({ code }) => {
+        if (code === "Enter" && text) {
+            sendMessage({ text, author: "User" });
             setText("");
         }
     };
 
-    useEffect(()=>{
-            const lastMessage = messageList[messageList.length - 1];
-            if(lastMessage.author === "User") {
-                setTimeout(()=>{
-                    setMessageList((state) => [...state, {author: "Bot", text: "What do you want for me?"}]);
-                },1500)
-            }
 
-        },[messageList]
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(text) {
+            sendMessage({ text, author: "User" });
+            setText("");
+        }
+    };
 
-    )
+    // useEffect(()=>{
+    //         const lastMessage = messageList[messageList.length - 1];
+    //         if(lastMessage.author === "User") {
+    //             setTimeout(()=>{
+    //                 setMessageList((state) => [...state, {author: "Bot", text: "What do you want for me?"}]);
+    //             },1500)
+    //         }
+    //
+    //     },[messageList]
+
+    // )
 
     return (
-        <div className = {styles.ListOfMessages}>
+        <>
+        <div>
             {messageList.map((mess, index) => (
                 <Message
-                    key = {index}
+                    key = {mess.text}
                     mess = {mess}
                 />
             ))}
+        </div>
 
              <Input
                 // className={s.input}
@@ -47,7 +57,7 @@ export const  ListOfMessages = () => {
                 placeholder="Введите сообщение..."
                 autoFocus={true}
                 fullWidth={true}
-                // onKeyPress={handlePressInput}
+                onKeyPress={handlePressInput}
                 endAdornment={
                     <InputAdornment position="end">
                         {text && (
@@ -57,6 +67,6 @@ export const  ListOfMessages = () => {
                 }
             />
 
-        </div>
+        </>
     );
-}
+};
