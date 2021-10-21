@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import './Form/form.css';
+import "./global.css";
+import {ListOfMessages, ListOfRooms} from './components';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <div className = "divv">
+      <ListOfRooms/>
+    <ListOfMessages />
+      </div>
   </React.StrictMode>,
   document.getElementById('root')
 );
