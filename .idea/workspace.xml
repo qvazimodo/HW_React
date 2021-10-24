@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf6e1a4c-e06e-490f-aec3-451f562f4f0c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/store/createStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/profile/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/profile/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/profile/reduser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/profile/selectors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/store/profile/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Form/Form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Form/form.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Message/Message.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Message/Message.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +50,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,6 +77,9 @@
       <workItem from="1633628810000" duration="5900000" />
       <workItem from="1633968463206" duration="14792000" />
       <workItem from="1634400685009" duration="604000" />
+      <workItem from="1635074471481" duration="777000" />
+      <workItem from="1635079443747" duration="742000" />
+      <workItem from="1635095685315" duration="2991000" />
     </task>
     <servers />
   </component>
