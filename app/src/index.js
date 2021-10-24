@@ -1,15 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import './Form/form.css';
+import "./global.css";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { ChatPage, ProfilePage } from "./pages";
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+
+            <Switch>
+                <Route path="/chat">
+                <ChatPage />
+            </Route>
+                <Route path="/profile">
+                    <ProfilePage />
+                </Route>
+
+                <Route path="*">
+                    <h1>404 page</h1>
+                    <div><Link to="/chat">go to Chat</Link></div>
+
+                    <div><Link to="/profile">go to Profile</Link></div>
+                </Route>
+            </Switch>
+
+    </BrowserRouter>,
   document.getElementById('root')
 );
 
