@@ -16,7 +16,7 @@ const useStyles = makeStyles(() => {
     };
 });
 
-export default function Room({chat,selected, handleListItemClick }) {
+export default function Room({title,selected, handleListItemClick }) {
     const s = useStyles();
 
     return (
@@ -30,7 +30,7 @@ export default function Room({chat,selected, handleListItemClick }) {
                 <AccountBoxIcon fontSize="large" className= {styles.icon} />
             </ListItemIcon>
             <div className={styles.description}>
-                <ListItemText className={styles.text} primary={chat} />
+                <ListItemText className={styles.text} primary={title} />
                 <ListItemText className={styles.text} primary="12.30" />
             </div>
         </ListItem>

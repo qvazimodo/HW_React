@@ -7,8 +7,8 @@ export function ProviderMessage({ children }) {
 
 
     const [conversations, setConversations] = useState([
-        { title: "Red", value: "" },
-        { title: "Zlobin", value: "" },
+        { title: "Red", text: "" },
+        { title: "Zlobin", text: "" },
     ]);
     const [messageList, setMessageList] = useState({
         Red: [{ text: "Red", author: "Bot", id: new Date() }],
@@ -16,11 +16,11 @@ export function ProviderMessage({ children }) {
     });
 
     const updateConversationsValue = useCallback(
-        (value = "") => {
+        (text = "") => {
             setConversations((conversations) => {
                 return conversations.map((conversation) => {
                     return conversation.title === roomId
-                        ? { ...conversation, value }
+                        ? { ...conversation, text }
                         : conversation;
                 });
             });
@@ -31,7 +31,8 @@ export function ProviderMessage({ children }) {
     const state = useMemo(() => {
         return {
             messageList: messageList[roomId] ?? [],
-            value: "", // придумать как получить значение текущей комнаты
+            text: conversations.find((conversation) => conversation.title === roomId)
+                ?.text ?? "",
             conversations,
             allMessageList: messageList,
         };
@@ -40,16 +41,16 @@ export function ProviderMessage({ children }) {
     const actions = useMemo(() => {
         return {
             handleChangeValue: (e) => {
-                const value = e?.target?.value ?? "";
+                const text = e?.target?.value ?? "";
 
-                updateConversationsValue(value);
+                updateConversationsValue(text);
             },
             createConversation: () => {
                 const title = prompt("введите название беседы:");
 
                 setConversations((conversations) => [
                     ...conversations,
-                    { title, value: "" },
+                    { title, text: "" },
                 ]);
             },
             sendMessage: (message) => {
