@@ -1,17 +1,32 @@
-import { useEffect, useState} from "react";
+import { useParams } from "react-router";
+
+import { useDispatch, useSelector } from "react-redux";
 import {Input, InputAdornment, List, ListItem, ListItemText} from "@mui/material";
 import { Send } from "@mui/icons-material";
-import Message from './Message/Message.js';
+import {
+    handleChangeMessageValue,
+    messageValueSelector,
+} from "../../store/conversations";
+import { sendMessageWithThunk, messagesSelector } from "../../store/messages";
+import {Message} from './Message/Message.js';
 import styles from'./listOfMessages.module.css';
+import { useMemo } from "react";
 
 
-export const  ListOfMessages = ({ messageList, sendMessage, text, handleChangeValue }) => {
+export const  ListOfMessages = () => {
+    const { roomId } = useParams();
 
+    const messageValue = useMemo(() => messageValueSelector(roomId), [roomId]);
+
+    const dispatch = useDispatch();
+    const text = useSelector(messageValue);
+
+    const messageList = useSelector(messagesSelector(roomId));
 
 
     const handlePressInput = ({ code }) => {
-        if (code === "Enter" && text) {
-            sendMessage({ text, author: "User" });
+        if (code === "Enter") {
+            handleSubmit();
 
         }
     };
@@ -19,9 +34,8 @@ export const  ListOfMessages = ({ messageList, sendMessage, text, handleChangeVa
 
     const handleSubmit = () => {
 
-        if(text) {
-            sendMessage({ text, author: "User" });
-
+        if (text) {
+            dispatch(sendMessageWithThunk({ author: "User", text }, roomId));
         }
     };
 
@@ -40,7 +54,8 @@ export const  ListOfMessages = ({ messageList, sendMessage, text, handleChangeVa
              <Input
 
                 value={text}
-                onChange={handleChangeValue}
+                onChange={(e) =>
+                    dispatch(handleChangeMessageValue(e.target.value, roomId))}
                 placeholder="Введите сообщение..."
                 autoFocus={true}
                 fullWidth={true}

@@ -4,15 +4,9 @@ import {
     ListOfMessages,
     ListOfRooms,
     MainTemplate,
-    ProviderMessage,
+    // ProviderMessage,
 } from "../components";
 
-// @TODO
-// const messages =  {
-//   room1: [],
-//   room2: [],
-// }
-// messages[roomId]
 
 export function ChatPage() {
     const { push } = useHistory();
@@ -30,29 +24,46 @@ export function ChatPage() {
             document.removeEventListener("keydown", listenExistChat);
         };
     }, [push]);
-
+    //@TODO поправить чат
     return (
         <Switch>
-            <Route path={["/chat/:roomId", "/chat"]}>
-                <ProviderMessage>
-                    {([state, actions]) => (
-                        <MainTemplate  chats={<ListOfRooms
-                            {...state}
-                            createConversation={actions.createConversation}
-                        />}>
-                            <Route path="/chat/:roomId">
-                                <ListOfMessages {...state}
-                                                sendMessage={actions.sendMessage}
-                                                handleChangeValue={actions.handleChangeValue} />
-                            </Route>
+            {/*<Route path={["/chat/:roomId", "/chat"]}>*/}
+            {/*    <ProviderMessage>*/}
+            {/*        {([state, actions]) => (*/}
+            {/*            <MainTemplate  chats={<ListOfRooms*/}
+            {/*                {...state}*/}
+            {/*                createConversation={actions.createConversation}*/}
+            {/*            />}>*/}
+            {/*                <Route path="/chat/:roomId">*/}
+            {/*                    <ListOfMessages {...state}*/}
+            {/*                                    sendMessage={actions.sendMessage}*/}
+            {/*                                    handleChangeValue={actions.handleChangeValue} />*/}
+            {/*                </Route>*/}
 
-                            < Route exact path="/chat" >
-                                <h1>Выберите диалог</h1>
-                            </Route>
-                        </MainTemplate>
-                       )}
-                </ProviderMessage>
+            {/*                < Route exact path="/chat" >*/}
+            {/*                    <h1>Выберите диалог</h1>*/}
+            {/*                </Route>*/}
+            {/*            </MainTemplate>*/}
+            {/*           )}*/}
+            {/*    </ProviderMessage>*/}
+            {/*</Route>*/}
+            <Route path={["/chat/:roomId", "/chat"]}>
+                <MainTemplate  chats={<ListOfRooms/>} >
+                    <Route path="/chat/:roomId">
+                        <ListOfMessages/>
+                    </Route>
+                    <Route exact={true} path="/chat">
+                        <h1>выберите сообщение</h1>
+                    </Route>
+                    </MainTemplate>
+
             </Route>
+            <Route path="*">
+                <h1>такого чата нет</h1>
+            </Route>
+
+
+
         </Switch>
     );
 }
