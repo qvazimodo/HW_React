@@ -6,11 +6,12 @@ import { Send } from "@mui/icons-material";
 import {
     handleChangeMessageValue,
     messageValueSelector,
+    clearMessageValue,
 } from "../../store/conversations";
-import { sendMessageWithThunk, messagesSelector } from "../../store/messages";
-import {Message} from './Message/Message.js';
+import {messagesSelector, sendMessage} from "../../store/messages";
+import { Message } from "./Message";
 import styles from'./listOfMessages.module.css';
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 
 
 export const  ListOfMessages = () => {
@@ -19,9 +20,10 @@ export const  ListOfMessages = () => {
     const messageValue = useMemo(() => messageValueSelector(roomId), [roomId]);
 
     const dispatch = useDispatch();
-    const text = useSelector(messageValue);
+    const value = useSelector(messageValue);
 
-    const messageList = useSelector(messagesSelector(roomId));
+    const messages = useSelector(messagesSelector(roomId));
+
 
 
     const handlePressInput = ({ code }) => {
@@ -34,8 +36,10 @@ export const  ListOfMessages = () => {
 
     const handleSubmit = () => {
 
-        if (text) {
-            dispatch(sendMessageWithThunk({ author: "User", text }, roomId));
+        if (value) {
+            dispatch(sendMessage({ author: "User", value }, roomId));
+            dispatch(clearMessageValue(roomId));
+
         }
     };
 
@@ -43,17 +47,14 @@ export const  ListOfMessages = () => {
     return (
         <>
         <div>
-            {messageList.map((mess, index) => (
-                <Message
-                    key = {mess.text}
-                    mess = {mess}
-                />
+            {messages.map((message, id) => (
+                <Message key={message.value} message={message} />
             ))}
         </div>
 
              <Input
 
-                value={text}
+                value={value}
                 onChange={(e) =>
                     dispatch(handleChangeMessageValue(e.target.value, roomId))}
                 placeholder="Введите сообщение..."
@@ -62,7 +63,7 @@ export const  ListOfMessages = () => {
                 onKeyPress={handlePressInput}
                 endAdornment={
                     <InputAdornment position="end">
-                        {text && (
+                        {value && (
                             <Send className={styles.icon} onClick={handleSubmit} />
                         )}
                     </InputAdornment>

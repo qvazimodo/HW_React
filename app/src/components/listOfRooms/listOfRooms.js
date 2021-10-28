@@ -6,11 +6,13 @@ import {
 } from "../../store/conversations";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import React from "react";
 
 export const ListOfRooms = (  ) => {
     const params = useParams();
 
     const conversations = useSelector(conversationsSelector);
+    console.log("?conv:", conversations)
     const dispatch = useDispatch();
 
     const createConversationWithName = () => {
@@ -25,12 +27,15 @@ export const ListOfRooms = (  ) => {
 
     return (
 
-        <List component= 'nav' sx={{ width: '40%', bgcolor: 'background.paper', border: "10px", backgroundColor: "darkgrey" }}>
+        <List component= 'nav' >
             <button onClick={createConversationWithName}>Создать беседу</button>
              {conversations.map((chat, index) => (
+
                  <Link key={index} to={`/chat/${chat.title}`}>
-                <Room  title={chat.title} selected={chat.title === params.roomId}
-                       {...chat}
+                <Room
+                    title={chat.title}
+                    selected={chat.title === params.roomId}
+
                 />
                 </Link>
             ))}

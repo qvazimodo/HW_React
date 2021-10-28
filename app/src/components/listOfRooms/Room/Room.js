@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+// import { format } from "date-fns";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import { useSelector } from "react-redux";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
@@ -22,7 +22,8 @@ const useStyles = makeStyles(() => {
 export  function Room({title,selected, handleListItemClick }) {
     const s = useStyles();
 
-    const lastMessage = useSelector(lastMessageSelector(title));
+    // const lastMessage = useSelector(lastMessageSelector(title));
+    // console.log("!!!", lastMessage);
 
     return (
         <ListItem
@@ -36,18 +37,19 @@ export  function Room({title,selected, handleListItemClick }) {
             </ListItemIcon>
             <div className={styles.description}>
                 <ListItemText className={styles.text} primary={title} />
-                {lastMessage && (
-                    <>
-                        <ListItemText
-                            className={styles.text}
-                            primary={`${lastMessage.author}: ${lastMessage.text}`}
-                        />
-                        <ListItemText
-                            className={styles.text}
-                            primary={format(new Date(lastMessage.date), "yyyy-MM-dd")}
-                        />
-                    </>
-                )}
+                <ListItemText className={styles.text} primary="12.30" />
+                {/*{lastMessage && (*/}
+                {/*    <>*/}
+                {/*        <ListItemText*/}
+                {/*            className={styles.text}*/}
+                {/*            primary={`${lastMessage.author}: ${lastMessage.text}`}*/}
+                {/*        />*/}
+                {/*        <ListItemText*/}
+                {/*            className={styles.text}*/}
+                {/*            primary={format(new Date(lastMessage.date), "yyyy-MM-dd")}*/}
+                {/*        />*/}
+                {/*    </>*/}
+                {/*)}*/}
             </div>
         </ListItem>
 

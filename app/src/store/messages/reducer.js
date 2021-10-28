@@ -1,9 +1,10 @@
+import { nanoid } from "nanoid";
 import { SEND_MESSAGE } from "./types";
 
 const initialState = {
-    messageList: {
-        Red: [{ text: "Red", author: "Bot", date: new Date() }],
-        Zlobin: [{ text: "Zlobin", author: "Bot", date: new Date() }],
+    messages: {
+        room1: [{ value: "room1", author: "Bot", id: nanoid() }],
+        room2: [{ value: "room2", author: "Bot", id: nanoid() }],
     },
 };
 
@@ -12,13 +13,13 @@ export const messagesReducer = (state = initialState, action) => {
         case SEND_MESSAGE:
             return {
                 ...state,
-                messageList: {
-                    ...state.messageList,
+                messages: {
+                    ...state.messages,
                     [action.payload.roomId]: [
-                        ...state.messageList[action.payload.roomId],
-                        { ...action.payload.message, date: new Date() },
+                        ...state.messages[action.payload.roomId],
+                        { ...action.payload.message, id: new Date() },
                     ],
-                },
+                }
             };
         default:
             return state;

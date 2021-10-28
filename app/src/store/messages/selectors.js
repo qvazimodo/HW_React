@@ -1,9 +1,11 @@
 export const lastMessageSelector = (roomId) => (state) => {
-    const messageList = state.messageList.messageList[roomId];
+    console.log("lastMEssageSel:", state.messages.messages[roomId]);
+    const messages = state.messages.messages[roomId];
 
-    return messageList[messageList.length - 1];
+    return messages[messages.length - 1];
 };
 
 export const messagesSelector = (roomId) => (state) => {
-    return state.messageList.messageList[roomId] || [];
+    console.log("!@#$:::",state.messages.messages[roomId]);
+    return state.messages.messages[roomId];
 };
