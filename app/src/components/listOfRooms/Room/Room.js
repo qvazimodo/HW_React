@@ -1,5 +1,8 @@
+// import { format } from "date-fns";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import { useSelector } from "react-redux";
 import { ListItem, ListItemIcon, ListItemText } from "@mui/material";
+import { lastMessageSelector } from "../../../store/messages";
 import { makeStyles } from "@mui/styles";
 import styles from "./Room.module.css";
 
@@ -16,8 +19,11 @@ const useStyles = makeStyles(() => {
     };
 });
 
-export default function Room({title,selected, handleListItemClick }) {
+export  function Room({title,selected, handleListItemClick }) {
     const s = useStyles();
+
+    // const lastMessage = useSelector(lastMessageSelector(title));
+    // console.log("!!!", lastMessage);
 
     return (
         <ListItem
@@ -32,6 +38,18 @@ export default function Room({title,selected, handleListItemClick }) {
             <div className={styles.description}>
                 <ListItemText className={styles.text} primary={title} />
                 <ListItemText className={styles.text} primary="12.30" />
+                {/*{lastMessage && (*/}
+                {/*    <>*/}
+                {/*        <ListItemText*/}
+                {/*            className={styles.text}*/}
+                {/*            primary={`${lastMessage.author}: ${lastMessage.text}`}*/}
+                {/*        />*/}
+                {/*        <ListItemText*/}
+                {/*            className={styles.text}*/}
+                {/*            primary={format(new Date(lastMessage.date), "yyyy-MM-dd")}*/}
+                {/*        />*/}
+                {/*    </>*/}
+                {/*)}*/}
             </div>
         </ListItem>
 

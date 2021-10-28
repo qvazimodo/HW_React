@@ -1,13 +1,17 @@
 import classNames from "classnames";
 import styles from "./Message.module.css";
+// import { format } from "date-fns";
+import { memo } from "react";
 
-export default function Message({mess}){
-    const {text, author} = mess;
+export const Message = memo(({message}) => {
+    const { author, value } = message;
   return(
     <div className ={classNames(styles.message,{[styles.currentMessage]:author === "User"})} >
       <h3> {author} </h3>
-      <p> {text}   </p>
+      <p> {value}   </p>
+        <p>12.03</p>
+        {/*<p>{format(new Date(date), "yyyy-MM-dd")}</p>*/}
   
     </div>
   )
-}
+});

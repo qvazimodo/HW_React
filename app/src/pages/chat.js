@@ -1,18 +1,12 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { Route, Switch, useHistory } from "react-router-dom";
 import {
     ListOfMessages,
     ListOfRooms,
     MainTemplate,
-    ProviderMessage,
+    // ProviderMessage,
 } from "../components";
 
-// @TODO
-// const messages =  {
-//   room1: [],
-//   room2: [],
-// }
-// messages[roomId]
 
 export function ChatPage() {
     const { push } = useHistory();
@@ -34,25 +28,26 @@ export function ChatPage() {
     return (
         <Switch>
             <Route path={["/chat/:roomId", "/chat"]}>
-                <ProviderMessage>
-                    {([state, actions]) => (
-                        <MainTemplate  chats={<ListOfRooms
-                            {...state}
-                            createConversation={actions.createConversation}
-                        />}>
+
+
+                        <MainTemplate
+                            chats= {
+                                <ListOfRooms/>}>
                             <Route path="/chat/:roomId">
-                                <ListOfMessages {...state}
-                                                sendMessage={actions.sendMessage}
-                                                handleChangeValue={actions.handleChangeValue} />
+                                <ListOfMessages  />
                             </Route>
 
                             < Route exact path="/chat" >
                                 <h1>Выберите диалог</h1>
                             </Route>
                         </MainTemplate>
-                       )}
-                </ProviderMessage>
+
+
             </Route>
+
+
+
+
         </Switch>
     );
 }
