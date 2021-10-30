@@ -3,14 +3,17 @@ import { Provider } from "react-redux";
 import ReactDOM from 'react-dom';
 import "./global.css";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 import { ChatPage, ProfilePage } from "./pages";
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import { store } from "./store";
+import { store, persistor } from "./store";
+
 
 
 ReactDOM.render(
     <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
     <BrowserRouter>
 
             <Switch>
@@ -30,6 +33,7 @@ ReactDOM.render(
             </Switch>
 
     </BrowserRouter>
+        </PersistGate>
     </Provider>,
   document.getElementById('root')
 );

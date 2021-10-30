@@ -1,4 +1,4 @@
 export * from "./types";
 export * from "./reduser";
-export * from "./action";
+export * from "./actions";
 export * from "./selectors";

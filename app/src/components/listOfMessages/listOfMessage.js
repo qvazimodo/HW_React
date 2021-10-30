@@ -8,7 +8,7 @@ import {
     messageValueSelector,
     clearMessageValue,
 } from "../../store/conversations";
-import {messagesSelector, sendMessage} from "../../store/messages";
+import {messagesSelector, sendMessage, sendMessageWithThunk} from "../../store/messages";
 import { Message } from "./Message";
 import styles from'./listOfMessages.module.css';
 import React, { useMemo } from "react";
@@ -37,8 +37,8 @@ export const  ListOfMessages = () => {
     const handleSubmit = () => {
 
         if (value) {
-            dispatch(sendMessage({ author: "User", value }, roomId));
-            dispatch(clearMessageValue(roomId));
+            dispatch(sendMessageWithThunk({ author: "User", value }, roomId));
+
 
         }
     };
