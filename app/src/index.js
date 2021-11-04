@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import "./global.css";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
-import { ChatPage, ProfilePage } from "./pages";
+import { ChatPage, ProfilePage, GistsPage } from "./pages";
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { store, persistor } from "./store";
@@ -23,11 +23,14 @@ ReactDOM.render(
                 <Route path="/profile">
                     <ProfilePage />
                 </Route>
+                <Route path="/gists">
+                    <GistsPage />
+                </Route>
 
                 <Route path="*">
                     <h1>404 page</h1>
                     <div><Link to="/chat">go to Chat</Link></div>
-
+                    <div> <Link to="/gists">Gists</Link> </div>
                     <div><Link to="/profile">go to Profile</Link></div>
                 </Route>
             </Switch>
