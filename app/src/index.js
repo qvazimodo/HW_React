@@ -25,7 +25,7 @@ ReactDOM.render(
                 </Route>
                 <Route path="/gists">
                     <GistsPage />
-                </Route>
+                </Route>/
 
                 <Route path="*">
                     <h1>404 page</h1>

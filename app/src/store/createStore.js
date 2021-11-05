@@ -29,8 +29,8 @@ const persistreducer = persistReducer(
 export const store = createStore(
     persistreducer,
     compose(
-        applyMiddleware(thunk),
-        thunk.withExtraArgument({ getGistsApi, searchGistsByUserNameApi }),
+        applyMiddleware(thunk.withExtraArgument({ getGistsApi, searchGistsByUserNameApi })),
+        // thunk.withExtraArgument({ getGistsApi, searchGistsByUserNameApi }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 );
