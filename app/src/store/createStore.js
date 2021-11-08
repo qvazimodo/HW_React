@@ -6,6 +6,8 @@ import storage from "redux-persist/lib/storage"; // defaults to localStorage for
 import { profileReducer } from "./profile";
 import { conversationsReducer } from "./conversations";
 import { messagesReducer } from "./messages";
+import { getGistsApi, searchGistsByUserNameApi } from "../api";
+import { gistsReducer } from "./gists";
 
 const persistConfig = {
     key: "root",
@@ -20,13 +22,15 @@ const persistreducer = persistReducer(
         profile: profileReducer,
         conversations: conversationsReducer,
         messages: messagesReducer,
+        gists: gistsReducer,
     })
 );
 
 export const store = createStore(
     persistreducer,
     compose(
-        applyMiddleware(thunk),
+        applyMiddleware(thunk.withExtraArgument({ getGistsApi, searchGistsByUserNameApi })),
+        // thunk.withExtraArgument({ getGistsApi, searchGistsByUserNameApi }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 );
